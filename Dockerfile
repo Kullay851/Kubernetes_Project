@@ -1,9 +1,8 @@
-FROM  centos:latest
+FROM  ubuntu
 MAINTAINER kullaybasha07@gmail.com
-RUN apt-get update \ 
-apt-get install httpd -y \
- apt-get install zip -y\
- unzip
+RUN apt-get update && \ 
+apt-get install zip -y &&\
+ apt-get install unzip -y
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page254/photogenic.zip /var/www/html/
 WORKDIR /var/www/html/
 RUN unzip photogenic.zip
